@@ -42,31 +42,61 @@ font-family: poppins 800
     color: #242f5f;
 }
 
-
 .navbar a:hover{
     color: #9ea7cd;
 }
 
 /* Estilos para la sección principal */
-main{
+/* main{
     height: calc(100vh - 80px);
     background-image: url(media/banner.png);
     background-size: cover;
+} */
+
+.bienvenidos{
+  font-family: poppins;
+  font-size: 30px;
+  background-image: linear-gradient(to bottom, #8fedb7,#26325e);
 }
 
-.call{
-    font-family: poppins;
-    font-size: 30px;
-    float: right;
-    padding-top: 180px;
-    padding-right: 80px;
+.bh2{
+  float: right;
+  font-size: 22px;
+  margin-left: 800px;
 }
 
-.call h2{
-    font-size: 16px;
-    float: right;
-    font-family: poppins 100;
-    color: #97edb1;
+.bh1{
+  margin-top: 100px;
+  float: right;
+}
+
+.row{
+  padding: 0;
+  height: 600px;
+  width: auto;
+}
+
+/* Estilos para el efecto de texto animado */
+
+.animacion{
+  height: 60px;
+  background-color: #c88386;
+  width: auto;
+}
+
+.animated-text {
+  font-size: 22px;
+  animation: moveText 10s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes moveText {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
 }
 
 /* Estilos para la sección "Nosotros" */
@@ -86,10 +116,7 @@ main{
 }
 
 .imgnos{
-    padding: flex;
-    float: left;
     margin-top: 100px;
-    margin-left: 80px;
 }
 
 .historia{
@@ -106,27 +133,32 @@ main{
 }
 
 /* Estilos para la sección "Servicios" */
-.sec2{
-    height: 600px;
+.servicios{
+    height: 80px;
     width: auto;
-    background-color: white;
+    background-color: #c88386;
 }
 
-#servicios{
-    font-family: poppins;
-    font-size: 48px;
-    float: right;
-    margin-top: 100px;
-    margin-right: 80px;
+.txserv{
+  float: right;
+  margin-top: 20px;
+}
+
+.sec2{
+  width: auto;
+  background-color: #c88386;
+  height: 600px;
+}
+
+.boxonline{
+  margin-top: 100px;
+  float: center;
 }
 
 .onlinetitulo{
     font-family: poppins;
     text-align: center;
     padding: 6px;
-    float: right;
-    margin-top: 200px;
-    margin-right: 80px;
     width: 180px;
     height: 50px;
     background-color: #97edb1;
@@ -136,13 +168,28 @@ main{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.infoonline{
+  font-family: poppins;
+  text-align: center;
+  padding: 13px;
+  margin-right: 280px;
+  margin-top: 20px;
+}
+
+.onlinetitulo h3 {
+  font-size: 20px;
+  margin-top: 6px;
+}
+
+.boxpresencial{
+  margin-top: 100px;
+  align-items: center; 
+}
+
 .presencialtitulo{
     font-family: poppins;
     text-align: center;
     padding: 5px;
-    float: left;
-    margin-top: 200px;
-    margin-left: 300px;
     width: 180px;
     height: 50px;
     background-color: #97edb1;
@@ -152,31 +199,14 @@ main{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-.onlinetitulo h3 {
-    font-size: 20px;
-    margin-top: 6px;
-}
-
 .presencialtitulo h3 {
     font-size: 20px;
     margin-top: 6px;
 }
 
-.infoonline{
-    font-family: poppins;
-    text-align: center;
-    padding: 13px;
-    float: right;
-    margin-right: 280px;
-    margin-top: 20px;
-}
-
 .infopresencial{
     font-family: poppins;
     padding: 13px;
-    float: left;
-    margin-top: 20px;
-    margin-left: 240px;
     width: 300px;
     height: 300px;
 }
@@ -230,6 +260,11 @@ footer i:hover{
     max-height: 100%;
     background-color: #97edb1;
     border-radius: 30px 30px 30px 30px;
+}
+
+.maps{
+  background-color: #c88386;
+  width: auto;
 }
 
 /* Breakpoint para sitio responsivo */
