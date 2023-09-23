@@ -46,13 +46,6 @@ font-family: poppins 800
     color: #9ea7cd;
 }
 
-/* Estilos para la sección principal */
-/* main{
-    height: calc(100vh - 80px);
-    background-image: url(media/banner.png);
-    background-size: cover;
-} */
-
 .bienvenidos{
   font-family: poppins;
   font-size: 30px;
@@ -76,18 +69,29 @@ font-family: poppins 800
   width: auto;
 }
 
-/* Estilos para el efecto de texto animado */
-
-.animacion{
-  height: 60px;
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 100%;
+  height: 30px;
   background-color: #c88386;
-  width: auto;
 }
 
-.animated-text {
-  font-size: 22px;
-  animation: moveText 10s linear infinite;
-  white-space: nowrap;
+/* Estilos para el elemento que se desplaza */
+.marquee {
+  display: inline-block;
+  animation: marquee 18s linear infinite; /* Ajusta la velocidad según tus preferencias */
+}
+
+/* Animación para el desplazamiento */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes moveText {
@@ -117,6 +121,8 @@ font-family: poppins 800
 
 .imgnos{
     margin-top: 100px;
+    width: 320px;
+    height: 320px;
 }
 
 .historia{
@@ -132,87 +138,46 @@ font-family: poppins 800
     font-size: 14px;
 }
 
-/* Estilos para la sección "Servicios" */
-.servicios{
-    height: 80px;
-    width: auto;
-    background-color: #c88386;
+/* Estilo base para los contenedores */
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%; /* Ancho máximo de la página */
+  height: 700px; /* Altura fija de 700px */
 }
 
-.txserv{
-  float: right;
-  margin-top: 20px;
+/* Estilo para las imágenes en color */
+.color-image {
+  width: 100%; /* Ocupar todo el ancho del contenedor */
+  height: auto; /* Altura automática para mantener la proporción */
+  transition: filter 0.3s ease;
 }
 
-.sec2{
-  width: auto;
-  background-color: #c88386;
-  height: 600px;
+/* Estilo para las imágenes en blanco y negro */
+.bw-image {
+  filter: grayscale(100%);
 }
 
-.boxonline{
-  margin-top: 100px;
-  float: center;
+/* Estilo para el texto que aparece encima de la imagen */
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  display: none;
 }
 
-.onlinetitulo{
-    font-family: poppins;
-    text-align: center;
-    padding: 6px;
-    width: 180px;
-    height: 50px;
-    background-color: #97edb1;
-    border: 1px solid #242f5f;
-    border-radius: 10px;
-    font-size: 14px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Estilo para el contenedor cuando se coloca el mouse encima */
+.image-container:hover .color-image {
+  filter: grayscale(100%);
 }
 
-.infoonline{
-  font-family: poppins;
-  text-align: center;
-  padding: 13px;
-  margin-right: 280px;
-  margin-top: 20px;
-}
-
-.onlinetitulo h3 {
-  font-size: 20px;
-  margin-top: 6px;
-}
-
-.boxpresencial{
-  margin-top: 100px;
-  align-items: center; 
-}
-
-.presencialtitulo{
-    font-family: poppins;
-    text-align: center;
-    padding: 5px;
-    width: 180px;
-    height: 50px;
-    background-color: #97edb1;
-    border: 1px solid #242f5f;
-    border-radius: 10px;
-    font-size: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-.presencialtitulo h3 {
-    font-size: 20px;
-    margin-top: 6px;
-}
-
-.infopresencial{
-    font-family: poppins;
-    padding: 13px;
-    width: 300px;
-    height: 300px;
-}
-
-.infopresencial ul{
-    list-style-type: none;
+.image-container:hover .image-text {
+  display: block;
 }
 
 /* Estilos para el pie de página */
@@ -264,7 +229,6 @@ footer i:hover{
 
 .maps{
   background-color: #c88386;
-  width: auto;
 }
 
 /* Breakpoint para sitio responsivo */
@@ -293,6 +257,68 @@ footer i:hover{
     .sec2 {
         height: 600px;
     }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      max-width: 100%; /* Ancho máximo de la página */
+      height: 200px; /* Altura fija de 200px */
+    }
+
+    .bh2{
+      float: right;
+      font-size: 18px;
+    }
+    
+    .bh1{
+      margin-top: 100px;
+      float: right;
+      font-size: 30px;
+    }
+
+    .sec1{
+      background: rgb(151,237,177);
+      background: linear-gradient(0deg, rgba(151,237,177,1) 0%, rgba(36,47,95,1) 100%);
+      height: 1000px;
+      width: 100%;
+      border-radius: 0 0 30px 30px;
+  }
+
+  #nosotros{
+    font-family: poppins;
+    font-size: 32px;
+}
+
+.imgnos{
+    margin-top: 20px;
+    width: 320px;
+    height: 320px;
+    float: center;
+}
+
+.historia{
+    background-color: #97edb1;
+    padding: 10px;
+    height: 460px;
+    width: 80%;
+    border-radius: 10px;
+    font-family: poppins;
+    font-size: 14px;
+}
+
+/* Estilos para el menú desplegable */
+.navbar-collapse {
+  background-color: #97edb1; /* Fondo de color */
+  position: fixed; /* Fijar la posición para cubrir el contenido */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999; /* Asegurar que esté en la parte superior */
+  color: #000; /* Color de texto negro */
+  overflow-y: auto; /* Agregar desplazamiento vertical si es necesario */
+}
 }
 
 
